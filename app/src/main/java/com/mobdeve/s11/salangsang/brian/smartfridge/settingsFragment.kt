@@ -22,10 +22,17 @@ class settingsFragment : Fragment() {
         // Inflate the layout for this fragment
         val v = inflater.inflate(R.layout.fragment_settings, container, false)
         val bt = v.findViewById<Button>(R.id.settingsAboutButton)
+        val bt2 = v.findViewById<Button>(R.id.settingsNotifButton)
         bt.setOnClickListener {
             val aboutFragment = AboutUs()
             val transaction: FragmentTransaction = parentFragmentManager.beginTransaction()
             transaction.replace(R.id.settingsLayout, aboutFragment).commit()
+        }
+
+        bt2.setOnClickListener {
+            val notifFragment = SettingsNotif()
+            val transaction: FragmentTransaction = parentFragmentManager.beginTransaction()
+            transaction.replace(R.id.settingsLayout, notifFragment).commit()
         }
 
         return v
