@@ -2,10 +2,10 @@ package com.mobdeve.s11.salangsang.brian.smartfridge
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.SnapHelper
@@ -67,6 +67,34 @@ class homeFragment : Fragment() {
 
         return viewBinding.root
     }
+
+    override fun onResume() {
+        super.onResume()
+
+        // perform view binding
+        val viewBinding = FragmentHomeBinding.inflate(layoutInflater)
+
+        foods = myDbHelper.getAllFoodsDefault()
+        myAdapter = MyAdapterHomeDB(foods)
+        myAdapter.notifyDataSetChanged()
+
+        viewBinding.homeRecyclerView.adapter = myAdapter
+
+    }
+
+//    override fun onPause() {
+//        super.onPause()
+//
+//        // perform view binding
+//        val viewBinding = FragmentHomeBinding.inflate(layoutInflater)
+//
+//        foods = myDbHelper.getAllFoodsDefault()
+//        myAdapter = MyAdapterHomeDB(foods)
+//
+//        viewBinding.homeRecyclerView.adapter = myAdapter
+//        myAdapter.notifyDataSetChanged()
+//
+//    }
 
     
     companion object {

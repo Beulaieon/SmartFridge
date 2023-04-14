@@ -69,7 +69,7 @@ class MyDBHelper(context: Context?) :
         }
 
         c.close()
-        database.close()
+//        database.close()
 
         return foods
     }
@@ -115,6 +115,6 @@ class MyDBHelper(context: Context?) :
                     COLUMN_NAME_FOOD_EXPIRY + " TEXT, " +
                     COLUMN_NAME_IMAGE_URI + " TEXT)"
 
-        const val DROP_TABLE_STATEMENT = "DROP TABLE IF EXISTS " + TABLE_NAME
+        const val DROP_TABLE_STATEMENT = "DROP TABLE IF EXISTS $TABLE_NAME"
     }
 }
