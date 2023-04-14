@@ -42,6 +42,7 @@
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:text="    "
+                android:contentDescription="About Developers"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -95,6 +96,7 @@
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:text="    "
+                android:contentDescription="Notification Settings"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -137,6 +139,7 @@
             android:layout_height="288dp"
             android:layout_marginTop="20dp"
             android:alpha="0.8"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:srcCompat="@drawable/night_fridge_02" />

@@ -40,6 +40,7 @@ class MyDBHelper(context: Context?) :
         onCreate(sqLiteDatabase)
     }
 
+
     fun getAllFoodsDefault(): ArrayList<Food> {
 
         val database: SQLiteDatabase = this.readableDatabase
@@ -70,12 +71,12 @@ class MyDBHelper(context: Context?) :
         }
 
         c.close()
-//        database.close()
+        //database.close()
 
         return foods
     }
 
-
+    // FOR INSERTING DATABASE
     fun insertFood(f: Food): Long {
         val database = this.writableDatabase
 
@@ -94,6 +95,8 @@ class MyDBHelper(context: Context?) :
         return key
     }
 
+
+    // FOR DELETING DATABASE
     fun deleteFood(f: Food) {
         val database = this.writableDatabase
         database.delete(
@@ -106,7 +109,7 @@ class MyDBHelper(context: Context?) :
 
 
 
-
+    //DB REFERENCE
     private object DbReferences {
         const val DATABASE_VERSION = 1
         const val DATABASE_NAME = "my_FoodDatabase.db"

@@ -1,12 +1,15 @@
 package com.mobdeve.s11.salangsang.brian.smartfridge
 
+//    MOBDEVE - S11
+//    MP GROUP 21 - SmartFridge
+
+//      Julia Dalipe
+//      Geryco Dionisio
+//      Brian Salangsang
+
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import android.view.animation.Animation
-import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.Toast
 

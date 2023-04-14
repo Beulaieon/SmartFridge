@@ -42,6 +42,8 @@ class HomePage : AppCompatActivity() {
 
     }
 
+
+    // FUNCTION FOR SWITCHING FRAGMENT IN NAVBAR
     private fun replaceFragment(fragment : Fragment){
 
         val fragmentManager = supportFragmentManager
