@@ -33,6 +33,7 @@
         android:id="@+id/getStartedBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/ghiyareg"
         android:text="Get Started"
         android:textSize="18dp"
         android:textStyle="bold"

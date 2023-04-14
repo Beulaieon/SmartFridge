@@ -14,6 +14,7 @@
         android:layout_marginTop="25dp"
         android:gravity="center"
         android:text="ADD FOOD DATA"
+        android:fontFamily="@font/ghiyaitalic"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent" />
@@ -36,6 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="35dp"
                 android:layout_marginTop="20dp"
+                android:fontFamily="@font/ghiyareg"
                 android:text="NAME"
                 android:textSize="15sp"
                 android:textStyle="bold" />
@@ -62,6 +64,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="35dp"
                 android:layout_marginTop="20dp"
+                android:fontFamily="@font/ghiyareg"
                 android:text="DESCRIPTION"
                 android:textSize="15sp"
                 android:textStyle="bold" />
@@ -88,6 +91,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="35dp"
                 android:layout_marginTop="20dp"
+                android:fontFamily="@font/ghiyareg"
                 android:text="EXPIRY DATE"
                 android:textSize="15sp"
                 android:textStyle="bold" />
