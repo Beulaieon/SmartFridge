@@ -28,4 +28,5 @@ class MyAdapterHomeDB(private val foods: ArrayList<Food>) : RecyclerView.Adapter
     override fun getItemCount(): Int {
         return foods.size
     }
+
 }

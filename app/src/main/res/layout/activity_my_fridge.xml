@@ -20,22 +20,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/fridgeBackground"
-        android:layout_width="450dp"
-        android:layout_height="520dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="60dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/fridge_home" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/foodRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:background="@drawable/open_fridge"
         android:layout_marginTop="15dp"
         android:padding="10dp"
         app:flow_verticalBias="1"
