@@ -12,12 +12,13 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:gravity="center"
         android:layout_marginTop="10dp"
-        android:text="ADD NOTIFICATION"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        />
+        android:fontFamily="@font/caramelvanilla"
+        android:gravity="center"
+        android:text="Add Notification"
+        android:textColor="#19273a"
+        android:textSize="30sp"
+        tools:ignore="TextSizeCheck" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -88,6 +89,7 @@
         android:layout_marginTop="10dp"
         android:backgroundTint="#F1B11F"
         android:text="Schedule Notification"
+        android:fontFamily="@font/ghiyareg"
         android:textStyle="bold" />
 
 

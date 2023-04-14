@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E3C5C1"
+    android:background="#CAE3C1"
     tools:context=".MyFridge">
 
     <TextView
