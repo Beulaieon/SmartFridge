@@ -54,7 +54,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="Pizza (Slice)"
+                        android:text="Food Name"
                         android:textColor="#19273a"
                         android:fontFamily="@font/ghiyareg"/>
 
@@ -63,7 +63,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Expiry: 03/18/2023"
+                        android:text="Expiry: 00/00/0000"
                         android:textColor="#FF0000"
                         android:textStyle="bold"/>
 
@@ -103,7 +103,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="Saladbowl"
+                        android:text="Food Name"
                         android:textColor="#19273a"
                         android:fontFamily="@font/ghiyareg"/>
 
@@ -112,7 +112,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Expiry: 04/03/2023"
+                        android:text="Expiry: 00/00/0000"
                         android:textColor="#FF0000"
                         android:textStyle="bold"/>
 
@@ -151,7 +151,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="Food Data"
+                        android:text="Food Name"
                         android:textColor="#19273a"
                         android:fontFamily="@font/ghiyareg"/>
 
@@ -198,7 +198,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="Food Data"
+                        android:text="Food Name"
                         android:textColor="#19273a"
                         android:fontFamily="@font/ghiyareg"/>
 
