@@ -66,7 +66,7 @@
                         android:id="@+id/aboutUsTv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="25dp"
+                        android:layout_marginTop="30dp"
                         android:text="About the Developers"
                         android:textColor="#19273a"
                         android:fontFamily="@font/ghiyareg"

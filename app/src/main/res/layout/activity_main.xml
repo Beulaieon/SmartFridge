@@ -37,7 +37,7 @@
         android:text="Get Started"
         android:textSize="18dp"
         android:textStyle="bold"
-        android:backgroundTint="#FE724C"
+        android:backgroundTint="#f1b11f"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/fridgeBG"
         app:layout_constraintEnd_toEndOf="parent"
