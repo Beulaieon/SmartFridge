@@ -2,6 +2,7 @@ package com.mobdeve.s11.salangsang.brian.smartfridge
 
 import android.net.Uri
 import android.util.Log
+import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.mobdeve.s11.salangsang.brian.smartfridge.databinding.ActivityMyFridgeBinding
 import com.mobdeve.s11.salangsang.brian.smartfridge.databinding.FoodLayoutBinding
@@ -20,6 +21,14 @@ class MyViewHolderDB(private val viewBinding: FoodLayoutBinding): RecyclerView.V
         Picasso.get()
             .load(Uri.parse(data.imageUri))
             .into(viewBinding.imageIv)
+    }
+
+    fun setDeleteBtnOnClickListener(onClickListener: View.OnClickListener?) {
+        this.viewBinding.deleteBtn.setOnClickListener(onClickListener)
+    }
+
+    fun setEditBtnOnClickListener(onClickListener: View.OnClickListener?) {
+        this.viewBinding.editBtn.setOnClickListener(onClickListener)
     }
 
 }
