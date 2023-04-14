@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="#C1E3DB"
     tools:context=".MyFridge"
     android:padding="4dp">
 
@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:clickable="true"
-        android:backgroundTint="@color/purple_200"
+        android:backgroundTint="#f1b11f"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
