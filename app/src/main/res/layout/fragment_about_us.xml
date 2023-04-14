@@ -21,9 +21,10 @@
             android:id="@+id/aboutUsTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ABOUT US"
-            android:textSize="25dp"
-            android:textStyle="bold"
+            android:text="About Us"
+            android:textColor="#19273a"
+            android:textSize="35sp"
+            android:fontFamily="@font/caramelvanilla"
             android:layout_marginTop="15dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -48,8 +49,10 @@
             android:layout_marginTop="28dp"
             android:gravity="center"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:text = "Julia Dalipe" />
+            android:text = "Julia Dalipe"
+
+            android:textColor="#19273a"
+            android:fontFamily="@font/ghiyareg"/>
 
         <TextView
             android:id="@+id/authorCourse"
@@ -96,8 +99,10 @@
             android:layout_marginTop="28dp"
             android:gravity="center"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:text = "Geryco Dionisio" />
+
+            android:text = "Geryco Dionisio"
+            android:textColor="#19273a"
+            android:fontFamily="@font/ghiyareg"/>
 
         <TextView
             android:id="@+id/authorCourse2"
@@ -144,8 +149,9 @@
             android:layout_marginTop="28dp"
             android:gravity="center"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:text = "Brian Salangsang" />
+            android:text = "Brian Salangsang"
+            android:textColor="#19273a"
+            android:fontFamily="@font/ghiyareg"/>
 
         <TextView
             android:id="@+id/authorCourse3"

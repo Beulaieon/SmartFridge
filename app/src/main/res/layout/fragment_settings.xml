@@ -20,9 +20,10 @@
             android:gravity="center"
             android:layout_marginTop="17dp"
             android:layout_marginBottom="20dp"
-            android:text="SETTINGS"
-            android:textSize="25dp"
-            android:textStyle="bold"
+            android:text="Settings"
+            android:textColor="#19273a"
+            android:textSize="35sp"
+            android:fontFamily="@font/caramelvanilla"
             />
 
         <FrameLayout
@@ -67,6 +68,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="25dp"
                         android:text="About the Developers"
+                        android:textColor="#19273a"
+                        android:fontFamily="@font/ghiyareg"
                         android:textAlignment="center"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -107,6 +110,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="25dp"
                         android:text="Notification Settings"
+                        android:textColor="#19273a"
+                        android:fontFamily="@font/ghiyareg"
                         android:textAlignment="center"
                         android:textSize="20sp"
                         android:textStyle="bold" />

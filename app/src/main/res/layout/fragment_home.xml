@@ -16,10 +16,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:text="Smart Fridge"
+            android:text="SmartFridge"
+            android:textColor="#19273a"
+            android:textSize="35sp"
             android:fontFamily="@font/caramelvanilla"
-            android:textSize="25dp"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -29,14 +29,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/fridge_inside2"
             app:layout_constraintTop_toBottomOf="@id/homeNavTitle" />
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/foodBtn"
             android:layout_width="match_parent"
-            android:layout_height="280dp"
+            android:layout_height="275dp"
             android:layout_marginTop="0dp"
             android:backgroundTint="#C1D4E3"
             android:clickable="true"

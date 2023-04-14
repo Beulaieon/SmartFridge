@@ -7,8 +7,6 @@
     android:background="#BEB4D6"
     tools:context=".notificationFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,9 +18,10 @@
             android:layout_height="60dp"
             android:gravity="center"
             android:layout_marginTop="10dp"
-            android:text="NOTIFICATION"
-            android:textSize="25dp"
-            android:textStyle="bold"
+            android:text="Notifications"
+            android:textColor="#19273a"
+            android:textSize="30sp"
+            android:fontFamily="@font/caramelvanilla"
             />
 
         <FrameLayout
@@ -55,7 +54,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="Pizza (Slice)"/>
+                        android:text="Pizza (Slice)"
+                        android:textColor="#19273a"
+                        android:fontFamily="@font/ghiyareg"/>
 
                     <TextView
                         android:id="@+id/notifExpiry"
@@ -63,6 +64,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="Expiry: 03/18/2023"
+                        android:textColor="#FF0000"
                         android:textStyle="bold"/>
 
                 </LinearLayout>
@@ -101,7 +103,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="Saladbowl"/>
+                        android:text="Saladbowl"
+                        android:textColor="#19273a"
+                        android:fontFamily="@font/ghiyareg"/>
 
                     <TextView
                         android:id="@+id/notif2Expiry"
@@ -109,6 +113,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="Expiry: 04/03/2023"
+                        android:textColor="#FF0000"
                         android:textStyle="bold"/>
 
                 </LinearLayout>
@@ -146,7 +151,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="Food Data"/>
+                        android:text="Food Data"
+                        android:textColor="#19273a"
+                        android:fontFamily="@font/ghiyareg"/>
 
                     <TextView
                         android:id="@+id/notif3Expiry"
@@ -154,6 +161,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="Expiry: 00/00/0000"
+                        android:textColor="#FF0000"
                         android:textStyle="bold"/>
 
                 </LinearLayout>
@@ -190,7 +198,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="Food Data"/>
+                        android:text="Food Data"
+                        android:textColor="#19273a"
+                        android:fontFamily="@font/ghiyareg"/>
 
                     <TextView
                         android:id="@+id/notif4Expiry"
@@ -198,6 +208,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="Expiry: 00/00/0000"
+                        android:textColor="#FF0000"
                         android:textStyle="bold"/>
 
                 </LinearLayout>
@@ -224,6 +235,7 @@
                     android:backgroundTint="#f1b11f"
                     android:clickable="true"
                     android:text="Notify Me"
+                    android:fontFamily="@font/ghiyareg"
                     android:textAlignment="center"
                     android:textSize="17sp"
                     android:textStyle="bold"
