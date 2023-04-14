@@ -28,7 +28,7 @@ class AddFoodData : AppCompatActivity() {
 
     private val executorService = Executors.newSingleThreadExecutor()
 
-    private val CAMERA_REQUEST_CODE = 1
+//    private val CAMERA_REQUEST_CODE = 1
 
     private lateinit var viewBinding : AddFoodDataBinding
     private lateinit var myDbHelper: MyDBHelper
