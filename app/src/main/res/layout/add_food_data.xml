@@ -13,10 +13,11 @@
         android:layout_height="60dp"
         android:layout_marginTop="25dp"
         android:gravity="center"
-        android:text="ADD FOOD DATA"
-        android:fontFamily="@font/ghiyaitalic"
+        android:text="Add Food Data"
+        android:textColor="#19273a"
+        android:fontFamily="@font/caramelvanilla"
         android:textSize="25sp"
-        android:textStyle="bold"
+
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
@@ -40,6 +41,7 @@
                 android:fontFamily="@font/ghiyareg"
                 android:text="NAME"
                 android:textSize="15sp"
+                android:textColor="#19273a"
                 android:textStyle="bold" />
 
             <EditText
@@ -50,6 +52,7 @@
                 android:layout_height="48dp"
                 android:layout_marginHorizontal="35dp"
                 android:layout_marginTop="6dp"
+                android:textColor="#19273a"
                 android:background="@color/white" />
 
         </LinearLayout>
@@ -67,11 +70,13 @@
                 android:fontFamily="@font/ghiyareg"
                 android:text="DESCRIPTION"
                 android:textSize="15sp"
+                android:textColor="#19273a"
                 android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/foodDescEtv"
                 android:hint="Enter food description"
+
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginHorizontal="35dp"
@@ -93,6 +98,7 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/ghiyareg"
                 android:text="EXPIRY DATE"
+                android:textColor="#19273a"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 

@@ -38,6 +38,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="FoodTitle"
+                android:textColor="#19273a"
                 android:fontFamily="@font/ghiyareg"
                 android:textAlignment="center"
                 android:textSize="18sp"
@@ -49,6 +50,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:text="Description"
+                android:textColor="#19273a"
                 android:textSize="15sp" />
 
             <TextView
