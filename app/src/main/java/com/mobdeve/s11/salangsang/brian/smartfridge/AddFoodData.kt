@@ -1,6 +1,5 @@
 package com.mobdeve.s11.salangsang.brian.smartfridge
 
-import android.app.Activity
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.graphics.Bitmap
@@ -35,6 +34,10 @@ class AddFoodData : AppCompatActivity() {
     private lateinit var myDbHelper: MyDBHelper
     private var imageUri: Uri? = null
 
+    private var foodId: Long = -1
+
+    private var isEdit: Boolean = false
+
 
     private val myActivityResultLauncher = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
@@ -50,31 +53,50 @@ class AddFoodData : AppCompatActivity() {
         }
     }
 
-    private val resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-        if (result.resultCode == Activity.RESULT_OK) {
+    private val myActivityResultLauncherCamera = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
 
-            // There are no request codes
-            // viewBinding.tempImageIv.load(bitmap)
+        if (result.resultCode == RESULT_OK && result.data != null) {
+
+//            imageUri = result.data!!.data
+            val bitmap = result.data!!.extras?.getString("data") as Bitmap?
+            viewBinding.tempImageIv.load(bitmap)
+
         }
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
 
-        if (resultCode == Activity.RESULT_OK){
+    //Depreciated method
 
-            when(requestCode){
-
-                CAMERA_REQUEST_CODE->{
-
-                    val bitmap = data?.extras?.get("data") as Bitmap
-
-                    //coroutine image loader (coil)
-                    viewBinding.tempImageIv.load(bitmap)
-                }
-            }
-        }
-    }
+//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+//        super.onActivityResult(requestCode, resultCode, data)
+//
+//        if (resultCode == Activity.RESULT_OK){
+//
+//            when(requestCode){
+//
+//                CAMERA_REQUEST_CODE->{
+//
+//                    val bitmap = data?.extras?.get("data") as Bitmap
+//
+//                    //coroutine image loader (coil)
+//                    viewBinding.tempImageIv.load(bitmap)
+//                }
+//            }
+//        }
+//    }
+//
+//    private val resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+//        if (result.resultCode == Activity.RESULT_OK) {
+//
+//            // There are no request codes
+//            if(result?.data != null) {
+//                imageUri = result.data!!.data
+//                val bitmap = result.data?.extras?.getString("data") as Bitmap?
+//                viewBinding.tempImageIv.load(bitmap)
+//            }
+//        }
+//    }
 
 
 
@@ -88,6 +110,27 @@ class AddFoodData : AppCompatActivity() {
         this.viewBinding = AddFoodDataBinding.inflate(layoutInflater)
         setContentView(this.viewBinding.root)
 
+        // Check if an intent is there (i.e. if its coming for an EDIT operation)
+        val i = intent
+        this.foodId = i.getLongExtra(IntentKeys.FOOD_ID_KEY.name, -1)
+
+        // If the foodId is default, it means there's no intent. If there is a value other than
+        // -1, then we need to edit.
+        if (this.foodId != -1L) {
+            this.isEdit = true
+
+            this.viewBinding.foodNameEtv.setText(i.getStringExtra(IntentKeys.FOOD_NAME_KEY.name))
+            this.viewBinding.foodDescEtv.setText(i.getStringExtra(IntentKeys.FOOD_DESCRIPTION_KEY.name))
+            this.viewBinding.foodExpEtv.setText(i.getStringExtra(IntentKeys.FOOD_EXPIRY_KEY.name))
+            imageUri = Uri.parse(i.getStringExtra(IntentKeys.IMAGE_URI_KEY.name))
+            Picasso.get().load(imageUri).into(this.viewBinding.tempImageIv)
+
+            // Para alam ni user na edit ang gagawin, hindi add
+            this.viewBinding.saveBtn.text = "EDIT CONTACT"
+            this.viewBinding.textView3.text = "Edit Contact"
+        }
+
+
         //gallery access
         this.viewBinding.imageBtn.setOnClickListener(View.OnClickListener {
             val i = Intent()
@@ -98,9 +141,7 @@ class AddFoodData : AppCompatActivity() {
 
         //camera access
         this.viewBinding.cameraBtn.setOnClickListener(View.OnClickListener {
-
             cameraCheckPermission()
-
         })
 
 
@@ -109,7 +150,7 @@ class AddFoodData : AppCompatActivity() {
             if (areFieldsComplete()) {
                 executorService.execute {
                     myDbHelper = MyDBHelper.getInstance(this@AddFoodData)!!
-                    myDbHelper.insertFood(
+                    foodId = myDbHelper.insertFood(
                         Food(
                             this.viewBinding.foodNameEtv.text.toString(),
                             this.viewBinding.foodDescEtv.text.toString(),
@@ -124,7 +165,13 @@ class AddFoodData : AppCompatActivity() {
                 i.putExtra(IntentKeys.FOOD_DESCRIPTION_KEY.name, this.viewBinding.foodDescEtv.text.toString())
                 i.putExtra(IntentKeys.FOOD_EXPIRY_KEY.name, this.viewBinding.foodExpEtv.text.toString())
                 i.putExtra(IntentKeys.IMAGE_URI_KEY.name, imageUri.toString())
-                setResult(RESULT_OK, i)
+                i.putExtra(IntentKeys.FOOD_ID_KEY.name, foodId)
+
+                if(this.isEdit) {
+                    setResult(ResultCodes.EDIT_RESULT.ordinal, i)
+                }else{
+                    setResult(ResultCodes.ADD_RESULT.ordinal, i)
+                }
 
                 finish()
             } else {
@@ -164,8 +211,13 @@ class AddFoodData : AppCompatActivity() {
 
     private fun camera() {
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-//      startActivityForResult(intent, CAMERA_REQUEST_CODE)
-        resultLauncher.launch(intent)
+        myActivityResultLauncherCamera.launch(intent)
+
+
+
+    //  Depreciated
+    //      startActivityForResult(intent, CAMERA_REQUEST_CODE)
+    //      resultLauncher.launch(intent)
     }
 
 

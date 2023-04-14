@@ -5,6 +5,7 @@ import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import java.lang.String
 
 class MyDBHelper(context: Context?) :
     SQLiteOpenHelper(context, DbReferences.DATABASE_NAME, null, DbReferences.DATABASE_VERSION) {
@@ -75,7 +76,7 @@ class MyDBHelper(context: Context?) :
     }
 
 
-    fun insertFood(f: Food) {
+    fun insertFood(f: Food): Long {
         val database = this.writableDatabase
 
         // Create a new map of values, where column names are the keys
@@ -87,10 +88,20 @@ class MyDBHelper(context: Context?) :
 
         // Insert the new row
         // Inserting returns the primary key value of the new row, but we can ignore that if we don’t need it
-        database.insert(DbReferences.TABLE_NAME, null, values)
+        val key = database.insert(DbReferences.TABLE_NAME, null, values)
         database.close()
+
+        return key
     }
 
+    fun deleteFood(f: Food) {
+        val database = this.writableDatabase
+        database.delete(
+            DbReferences.TABLE_NAME,
+            DbReferences._ID + " = ?", arrayOf(String.valueOf(f.getFoodId()))
+        )
+        database.close()
+    }
 
 
 

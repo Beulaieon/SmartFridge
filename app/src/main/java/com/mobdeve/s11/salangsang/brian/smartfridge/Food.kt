@@ -29,6 +29,26 @@ class Food {
         this.id = id
     }
 
+    fun getFoodId(): Long {
+        return id
+    }
+
+    fun getFoodName(): String? {
+        return foodname
+    }
+
+    fun getFoodDescription(): String? {
+        return description
+    }
+
+    fun getFoodExpiry(): String? {
+        return expiry
+    }
+
+    fun getFoodImageUri(): String? {
+        return imageUri
+    }
+
     override fun toString(): String {
         return "Food{" +
                 "id=" + id +

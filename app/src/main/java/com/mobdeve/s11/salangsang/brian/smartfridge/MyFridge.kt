@@ -49,7 +49,7 @@ class MyFridge : AppCompatActivity() {
             printFoodsToLog()
 
             viewBinding.foodRecyclerView.layoutManager = LinearLayoutManager(this@MyFridge)
-            myAdapter = MyAdapterDB(foods)
+            myAdapter = MyAdapterDB(foods, myActivityResultLauncher)
             viewBinding.foodRecyclerView.adapter = myAdapter
 
         }
